@@ -1,0 +1,222 @@
+/* ----------------- Color Palate Style / Color Switcher Style ------------------- */
+
+.color-palate {
+    background: #ffffff none repeat scroll 0 0;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 0 16px 16px 0;
+    position: fixed;
+    left: -285px;
+    text-align: center;
+    top: 20%;
+    transition: all 0.5s ease 0s;
+    width: 285px;
+    z-index: 999;
+	padding-bottom:30px;
+}
+
+.color-palate-inner{
+	position:relative;
+	height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-transition: all;
+}
+
+/* scrollbar */
+.color-palate-inner::-webkit-scrollbar {
+  width: 5px;
+}
+.color-palate-inner::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.color-palate-inner::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+.color-palate-inner::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* scrollbar */
+
+
+.color-palate-head {
+    background: var(--theme-color) none repeat scroll 0 0;
+    padding: 12px 0;
+}
+.color-palate-head h6{
+	font-weight:500;
+	color:var(--white-color) !important;
+}
+.color-palate-head h6,
+.secondary-head h6 {
+    color: var(--white-color);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px;
+    margin-top: 4px;
+	text-transform:uppercase;
+}
+.color-palate h6{
+	font-weight:500;
+	color:var(--theme-color);
+	text-transform: uppercase;
+	font-size:var(--font-16);
+	margin-bottom: 0;
+	margin-top: 15px;
+}
+
+.palate {
+    background: var(--primary-color) none repeat scroll 0 0;
+    display: block;
+    float: left;
+    height: 45px;
+    width: 20%;
+	border-radius: 12px;
+    margin: 0 2.5% 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+.colors-list .active::after{
+    background: url(../images/icons/tick.png) center center no-repeat !important;
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.various-color {
+    overflow: hidden;
+    padding: 20px 0 15px;
+}
+
+.colors-list {
+    margin: 0 20px;
+}
+
+
+.palate.default-color {
+    background: #163838 none repeat scroll 0 0;
+}
+
+.palate.color-1 {
+    background: #BDF95D none repeat scroll 0 0;
+}
+
+.palate.color-2 {
+    background: #02A95C none repeat scroll 0 0;
+}
+
+.palate.color-3 {
+    background: #B98E44 none repeat scroll 0 0;
+}
+
+.palate.color-4{
+    background: #AF9556 none repeat scroll 0 0;
+}
+
+.palate.color-5 {
+    background: #bb54e1 none repeat scroll 0 0;
+}
+
+.palate.color-6 {
+    background: #44A9AA none repeat scroll 0 0;
+}
+
+.palate.color-7 {
+    background: #fed000 none repeat scroll 0 0;
+}
+
+.color-trigger {
+    background: var(--primary-color) none repeat scroll 0 0;
+    cursor: pointer;
+    height: 50px;
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    width: 46px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    right: -46px;
+    position: absolute;
+    top: 30%;
+    padding-top: 4px;
+}
+.color-trigger .fa-fw{
+	animation: fa-spin 2s linear infinite;
+    -webkit-animation: fa-spin 2s linear infinite;
+    -moz-animation: fa-spin 2s linear infinite;
+    -ms-animation: fa-spin 2s linear infinite;
+    -o-animation: fa-spin 2s linear infinite;
+}
+.color-trigger:before{
+	content:'';
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+}
+
+.color-trigger i {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.color-palate.visible-palate {
+    left: 0px;
+}
+
+.color-palate .rtl-version{
+	padding-top:10px;
+	padding-bottom:0px;
+}
+
+.color-palate .box-version{
+	padding-top:10px;
+	padding-bottom:0px;
+}
+
+.color-palate .option-box{
+	padding-top:10px;
+	padding-bottom:5px;
+}
+
+.color-palate .option-box > li{
+	position: relative;
+	color:#ffffff;
+	width: 40%;
+	border-radius: 10px;
+	margin:0px 3px;
+	cursor: pointer;
+	margin-bottom: 9px;
+	padding:8px 12px;
+	font-size:12px;
+	display: inline-block;
+	background-color: var(--primary-color);
+	text-transform:uppercase;
+}
+
+.purchase-box .btn-2 {
+    width: max-content;
+    margin: 0 auto;
+}
+
+.purchase-box {
+    padding: 20px 20px 0;
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px){
+    .color-trigger {
+        top: 15%;
+    }
+
+    .color-palate {
+        left: -250px;
+        width: 250px;
+        padding-bottom: 10px;
+    }
+}

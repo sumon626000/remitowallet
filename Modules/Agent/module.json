@@ -1,0 +1,12 @@
+{
+    "name": "Agent",
+    "alias": "agent",
+    "icon": "bi-person-circle",
+    "description": "Enables a decentralized account distribution system through agents. Agents can onboard users, manage commissions, and facilitate transactions, making PaySecure scalable in regions with localized financial operations.",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Agent\\Providers\\AgentServiceProvider"
+    ],
+    "files": []
+}

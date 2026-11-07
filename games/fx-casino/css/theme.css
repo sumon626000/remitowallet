@@ -1,0 +1,69 @@
+/* FX CASINO - Dynamic Reskinning Theme Variable Sheet */
+
+:root {
+  /* Typography */
+  --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Outfit', sans-serif;
+
+  /* Base Color Palette — Remito Wallet */
+  --color-bg-body: #132144;
+  --color-bg-canvas: #1a2b55;
+  --color-bg-panel: rgba(25, 42, 84, 0.98);
+  --color-bg-inner-dark: #0f1a36;
+  --color-border-dark: #2a4580;
+
+  /* Bull and Bear Candlesticks / Indicators */
+  --color-bull-solid: #00c9a7;
+  --color-bull-glow: #4de3c8;
+  --color-bull-border: #0f766e;
+  --color-bull-light: rgba(0, 201, 167, 0.2);
+  --color-bear-solid: #ed4c78;
+  --color-bear-glow: #f87171;
+  --color-bear-border: #b42318;
+  --color-bear-light: rgba(237, 76, 120, 0.2);
+
+  /* Remito primary finishes (was gold) */
+  --color-gold-light: #9ec0ff;
+  --color-gold-mid: #377dff;
+  --color-gold-brushed: #1d4ed8;
+  --color-gold-dark: #132144;
+  --border-gold-stitch: rgba(55, 125, 255, 0.48);
+
+  /* Metallic Gradients (Chrome Bevels, Steel Plates) */
+  --gradient-chrome-bevel: linear-gradient(135deg, 
+    #7a8a9e 0%, 
+    #404d5e 12%, 
+    #8fa3ba 25%, 
+    #242b36 45%, 
+    #abbfd6 68%, 
+    #1f242e 85%, 
+    #63748a 100%
+  );
+  --gradient-steel-plate: linear-gradient(180deg, 
+    #f2f5f8 0%, 
+    #cbd5e0 15%, 
+    #adb7c4 48%, 
+    #7f8b9b 100%
+  );
+  --gradient-gold-belt: linear-gradient(180deg, 
+    #9ec0ff 0%, 
+    #377dff 30%, 
+    #1d4ed8 70%, 
+    #9ec0ff 100%
+  );
+  --gradient-leather-wallet: linear-gradient(180deg, 
+    #1a2b55 0%, 
+    #132144 100%
+  );
+
+  /* Button Actions */
+  --gradient-button-buy: linear-gradient(180deg, #4de3c8 0%, #00c9a7 48%, #0f766e 100%);
+  --gradient-button-sell: linear-gradient(180deg, #f87171 0%, #ed4c78 48%, #b42318 100%);
+  --gradient-button-modal: radial-gradient(circle at 45% 30%, #9ec0ff 0%, #377dff 60%, #1d4ed8 100%);
+
+  /* Utility HUD Colors */
+  --color-text-meta: #8e99a8;
+  --color-text-dim: #64748b;
+  --color-text-high: #f1f5f9;
+}

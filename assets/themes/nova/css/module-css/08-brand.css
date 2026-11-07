@@ -1,0 +1,114 @@
+.add-slider{
+    background: var(--black-color);
+    padding: 64px 0 64px;
+}
+.add-container{
+    overflow: hidden;
+}
+.add-container h6{
+    color: var(--white-color);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    margin-bottom: 30px;
+}
+.add-content{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+.add-content .add-content-inner{   
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 100px;
+    animation: scrolling 40s linear infinite;
+}
+@keyframes scrolling{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100vw);
+    }
+}
+.add-content:hover .add-content-inner {
+    animation-play-state: paused;
+}
+
+/* ---------------------------------
+responsive
+---------------------------------- */
+/* macbook pro*/
+@media only screen and (max-width: 1680px){
+
+}
+/* macbook pro*/
+
+/* macbook */
+@media only screen and (max-width: 1440px){
+    .add-content .add-content-inner h4 {
+        font-size: 28px;
+    }
+    .add-content .add-content-inner {
+        gap: 30px;
+    }
+}
+/* macbook */
+
+/* Large screen  */
+@media only screen and (min-width: 1200px) and (max-width: 1319px){
+    .add-content .add-content-inner h4 {
+        font-size: 22px;
+    }
+    .add-content .add-content-inner {
+        gap: 40px;
+    }
+}
+
+/* Medium screen  */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .add-content .add-content-inner h4 {
+        font-size: 16px;
+    }
+    .add-content .add-content-inner {
+        gap: 34px;
+    }
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .add-content .add-content-inner h4 {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .add-content .add-content-inner {
+        gap: 20px;
+        width: auto;
+    }
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px){
+    .add-content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .add-content .add-content-inner {
+        gap: 10px;
+        width: auto;
+    }
+    .add-content .add-content-inner h4 {
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .add-content .add-content-inner{
+        animation: scrolling 10s linear infinite;
+    }
+}
+/* ---------------------------------
+responsive
+---------------------------------- */

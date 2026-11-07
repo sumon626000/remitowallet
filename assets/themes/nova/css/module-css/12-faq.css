@@ -1,0 +1,72 @@
+.faq{
+    padding: 120px 0 0;
+}
+.faq-right-container{
+    margin-left: 50px;
+}
+
+.faq-page-accordion .accordion {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+.faq-page-accordion .accordion-item{
+    border: transparent;
+    background: var(--bg-7);
+    padding: 0 20px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+.faq-page-accordion .accordion-button:not(.collapsed),
+.faq-page-accordion .accordion-button:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: none;
+    background-color: transparent;
+    border-top: 1px solid transparent;
+}
+.faq-page-accordion .accordion-button::after {
+    background: url(../../images/icons/plus.png);
+    width: 25px;
+    height: 25px;
+    background-color: var(--primary-color);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+}
+.faq-page-accordion .accordion-button:not(.collapsed)::after {
+    background: url(../../images/icons/minus.png);
+    width: 25px;
+    height: 25px;
+    background-color: var(--primary-color);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+}
+.faq-page-accordion .accordion-button{
+    color: var(--black-color);
+    background: var(--bg-7);
+    font-size: 20px;
+    padding: 20px 0;
+    border-top: 1px solid transparent;
+    text-align: left;
+}
+.faq-page-accordion .accordion-body {
+    padding: 0px 0 16px;
+}
+
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px){
+    .faq {
+        padding: 80px 0 50px;
+    }
+    .faq-right-container {
+        margin-left: 0;
+    }
+    .testimonial-slider-content h3 {
+        margin: 16px 0;
+        font-size: 28px;
+    }
+}

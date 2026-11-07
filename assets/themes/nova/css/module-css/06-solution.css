@@ -1,0 +1,30 @@
+.solution{
+    padding: 120px 0 120px;
+}
+.solution-left-container{
+    position: relative;
+}
+.solution .common-title{
+    margin-bottom: 40px;
+}
+.solution .common-title p{
+    max-width: 553px;
+    width: 100%;
+}
+.solution-list ul li{
+    max-width: 513px;
+    width: 100%;
+    padding: 12px 12px;
+    background: var(--bg-6);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 16px;
+}
+.solution-list ul li i{
+    color: var(--primary-color);
+}
+.solution-image{
+    position: relative;
+}

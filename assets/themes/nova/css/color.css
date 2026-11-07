@@ -1,0 +1,63 @@
+/* Default Color File  */
+
+:root {
+
+    /* primary color */
+    --primary-color: #055927;
+
+    /* secondary color*/
+    --secondary-color: #60A548;
+    --secondary-color-rgb: 3, 63, 27;
+
+    /* text-color */
+    --text-color-1: #47494B;
+    --text-color-2: #252A2E;
+    --text-color-3: #C3D0C9;
+
+    /* black color */
+    --black-color: #171D21;
+    --black-color-rgb: 23, 29, 33;
+
+    /* Border color */
+    --border-1: #F0F5F3;
+    --border-2: #E8E8E8;
+
+    /* white color */
+    --white-color: #ffffff;
+    --white-color-rgb: 255, 255, 255;
+
+    /* gradient color */
+    /*--gradient-1: linear-gradient(216deg, #0ABF53 -33.21%, #055927 101%);*/
+    --gradient-1: linear-gradient(216deg, var(--secondary-color) -33.21%, var(--primary-color) 101%);
+
+    --gradient-2: radial-gradient(278.83% 64.59% at 47.99% 60.98%, #FAFFFC 0%, #F6FFF9 100%);
+
+    /* Bg color */
+    --bg-1: #173616;
+    --bg-2: #F9FEF9;
+    --bg-3: #EBF2F6;
+    --bg-4: #033F1B;
+    --bg-5: #F2FFF7;
+    --bg-6: #EDF9F2;
+    --bg-7: #F7FAF8;
+    --bg-8: #F6F9F7;
+    --bg-9: #D4F3E1;
+    --bg-10: #F7FCF8;
+    --bg-11: #EAFAEF;
+
+
+    /* Shadow 1 */
+    --shadow-1: 2px 1px 28.7px -2px rgba(155, 155, 155, 0.15);
+
+}
+
+
+
+
+
+
+
+
+
+
+

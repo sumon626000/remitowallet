@@ -1,0 +1,65 @@
+.about{
+    padding: 100px 0 120px;
+}
+.about-container{
+    padding: 52px 64px 68px;
+    border-radius: 16px;
+    background: linear-gradient(90deg, #F0FCF5 -15.12%, #F8FFFA 23.54%, #FEFEFE 101.94%);
+}
+.about-right-content{
+    margin-left: 40px;
+}
+.about-image img{
+    width: 100%;
+    height: 466px;
+    border-radius: 16px;
+}
+.about-mission{
+    margin-top: 60px;
+}
+.about-mission h4{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 42px;
+    margin-bottom: 16px;
+}
+
+
+/* ---------------------------------
+responsive
+---------------------------------- */
+/* MackBook */
+@media only screen and (max-width: 1440px){
+
+}
+
+/* Large screen  */
+@media only screen and (min-width: 1200px) and (max-width: 1319px){
+
+}
+
+/* Medium screen  */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px){
+    .about-container {
+        padding: 20px 15px 28px;
+    }
+    .about-right-content {
+        margin-left: 0;
+    }
+    .about-image img {
+        height: 300px;
+    }
+}
+/* ---------------------------------
+responsive
+---------------------------------- */

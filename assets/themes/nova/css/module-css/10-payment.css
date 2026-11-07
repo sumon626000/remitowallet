@@ -1,0 +1,141 @@
+.payment{
+    padding: 120px 0 120px;
+}
+.payment-left-container{
+    margin-right: 60px;
+}
+.payment-right-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.payment-girl{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.protect-method-box{
+    padding: 8px;
+    max-width: 250px;
+    width: 100%;
+    border-radius: 8px;
+    background: var(--white-color);
+    box-shadow: 3px 4px 20px 0px rgba(213, 227, 217, 0.50);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    left: -50px;
+    top: 50px;
+}
+.payment-method-container{
+    max-width: 640px;
+    width: 100%;
+    border-radius: 24px;
+    background: var(--bg-8);
+    padding: 32px 32px 37px 32px;
+}
+.payment-method-content{
+    padding: 30px 30px 10px;
+    border-radius: 16px;
+    background: var(--white-color);
+    box-shadow: 3px 4px 20px 0px rgba(213, 227, 217, 0.50);
+}
+.payment-method-title{
+    display: flex;
+    gap: 16px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border-1);
+}
+.payment-method-info h4{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+.payment-method-info p{
+    margin-bottom: 0;
+}
+
+.payment-method-slider{
+    padding-top: 26px;
+    position: relative;
+}
+.payment-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 155.565px;
+    height: 101.412px;
+    border-radius: 7.877px;
+    background: var(--white-color);
+    box-shadow: 0.985px 1.969px 9.255px 0px rgba(219, 233, 223, 0.24);
+    margin-bottom: 20px;
+}
+.swiper-pagination {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.swiper-pagination-bullet-active{
+    background: var(--primary-color) !important;
+}
+
+
+/* ---------------------------------
+responsive
+---------------------------------- */
+/* MackBook */
+@media only screen and (max-width: 1440px){
+
+}
+
+/* Large screen  */
+@media only screen and (min-width: 1200px) and (max-width: 1319px){
+    .protect-method-box {
+        display: none;
+    }
+}
+
+/* Medium screen  */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+    .protect-method-box {
+        display: none;
+    }
+    .payment-right-container{
+        margin-top: 50px;
+    }
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px){
+    .protect-method-box {
+        display: none;
+    }
+    .payment-right-container{
+        margin-top: 50px;
+    }
+    .payment-method-container {
+        padding: 15px 15px 37px 15px;
+    }
+    .payment-method-content {
+        padding: 30px 10px 10px;
+    }
+    .payment-card {
+        margin: 0 auto;
+        margin-bottom: 16px;
+    }
+}
+/* ---------------------------------
+responsive
+---------------------------------- */

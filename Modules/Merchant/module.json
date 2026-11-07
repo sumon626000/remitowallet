@@ -1,0 +1,12 @@
+{
+    "name": "Merchant",
+    "alias": "merchant",
+    "icon": "bi-person-bounding-box",
+    "description": "Allows businesses to integrate PaySecure for accepting online payments. Merchants can manage transactions, and track payment activity through a dedicated portal, enabling seamless e-commerce integration.",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Merchant\\Providers\\MerchantServiceProvider"
+    ],
+    "files": []
+}

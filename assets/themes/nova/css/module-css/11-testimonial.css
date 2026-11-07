@@ -1,0 +1,119 @@
+.testimonial{
+    padding: 120px 0 120px;
+    background: var(--gradient-2);
+}
+.testimonial-slider-content{
+    text-align: center;
+}
+.testimonial-slider-content h3{
+    margin: 16px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+}
+.customer-info{
+    max-width: 186px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 22px 10px 10px 10px;
+    border-radius: 8px;
+    background: #FBFFFD;
+    box-shadow: 3px 4px 20px 0px rgba(213, 227, 217, 0.50);
+    margin-top: 55px;
+}
+.customer-info h6{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-top: 10px;
+}
+.customer-info img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.testimonial-left-image-container, .testimonial-right-image-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.testimonial-left-image-container img:nth-child(1), .testimonial-right-image-container img:nth-child(1){
+    max-width: 90px;
+    width: 100%;
+    height: 90px;
+    border-radius: 50%;
+}
+.testimonial-left-image-container img:nth-child(2), .testimonial-right-image-container img:nth-child(2){
+    max-width: 56px;
+    width: 100%;
+    height: 56px;
+    border-radius: 50%;
+}
+.testimonial-left-image-container img:nth-child(3), .testimonial-right-image-container img:nth-child(3){
+    max-width: 76px;
+    width: 100%;
+    height: 76px;
+    border-radius: 50%;
+}
+.testimonial-left-image-container img:nth-child(1){
+    margin-right: -80px;
+}
+.testimonial-right-image-container img:nth-child(1){
+    margin-left: -30px;
+}
+.testimonial-left-image-container img:nth-child(2){
+    margin-right: -40px;
+}
+.testimonial-right-image-container img:nth-child(1){
+    margin-left: -40px;
+}
+.testimonial-left-image-container img:nth-child(3){
+    margin-left: -30px;
+}
+.testimonial-right-image-container img:nth-child(3){
+    margin-right: -80px;
+}
+
+/* ---------------------------------
+responsive
+---------------------------------- */
+/* MackBook */
+@media only screen and (max-width: 1440px){
+
+}
+
+/* Large screen  */
+@media only screen and (min-width: 1200px) and (max-width: 1319px){
+ 
+}
+
+/* Medium screen  */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .testimonial {
+        padding: 100px 0 100px;
+    }
+    .testimonial-left-image-container, .testimonial-right-image-container{
+        display: none;
+    }
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px){
+    .testimonial {
+        padding: 80px 0 80px;
+    }
+    .testimonial-left-image-container, .testimonial-right-image-container{
+        display: none;
+    }
+}
+/* ---------------------------------
+responsive
+---------------------------------- */

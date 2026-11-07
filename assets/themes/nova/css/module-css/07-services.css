@@ -1,0 +1,197 @@
+.services{
+    padding: 120px 0 170px;
+}
+.services .common-title-container h3{
+    max-width: 527px;
+    width: 100%;
+}
+.services .common-title-container p{
+    max-width: 465px;
+    width: 100%;
+}
+
+.services-carousol {
+    margin-left: 240px;
+    margin-right: -191px;
+}
+.services-single{
+    border-radius: 16px;
+    padding: 24px 24px;
+    background: var(--bg-7);
+    transition: 0.5s;
+}
+.services-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var( --gradient-1);
+    font-size: 32px;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.services-single-content a{
+    color: var(--black-color);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.services-single-content p{
+    margin-bottom: 0;
+    transition: 0.5s;
+}
+.swiper-slide-active .services-single-content a, .swiper-slide-active .services-single-content p{
+    color: var(--white-color);
+}
+.swiper-slide-active .services-icon{
+    background: var(--white-color);
+    color: var(--primary-color);
+}
+.swiper-slide-active .services-single{
+    background: var(--gradient-1);
+}
+
+.services-navigation {
+    margin-top: 30px;
+}
+
+.services-navigation .swiper-button-next, .services-navigation .swiper-button-prev {
+    background-image: none !important;
+    position: absolute;
+    top: 85% !important;
+    color: var(--primary-color);
+    font-size: 22px;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.swiper-button-prev {
+    left: 13% !important;
+}
+.swiper-button-next {
+    right: 82% !important;
+}
+
+
+/* ---------------------------------------------------------------
+Responsive
+----------------------------------------------------------------- */
+/* MackBook */
+@media only screen and (max-width: 1440px){
+    .services .common-title-container .common-title {
+        margin-bottom: 0;
+        margin-left: 230px;
+    }
+    .swiper-button-prev {
+        left: 17% !important;
+    }
+    .swiper-button-next {
+        right: 77% !important;
+    }
+}
+
+
+/* Large screen  */
+@media only screen and (min-width: 1200px) and (max-width: 1319px) {
+    .services {
+        padding: 100px 0 100px;
+    }
+    .services-carousol {
+        margin-left: 85px;
+        margin-right: -150px;
+    }
+    .services .common-title-container .common-title {
+        margin-bottom: 0;
+        margin-left: 0px;
+    }
+    .services-navigation .swiper-button-next, .services-navigation .swiper-button-prev {
+        top: 91% !important;
+    }
+    .swiper-button-prev {
+        left: 7% !important;
+    }
+    .swiper-button-next {
+        right: 86% !important;
+    }
+
+}
+
+
+
+/* Medium screen  */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .services-carousol {
+        margin-left: 50px;
+    }
+    .services .common-title-container .common-title {
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+    .services-navigation .swiper-button-prev {
+        left: 5% !important;
+    }
+    .swiper-button-next {
+        right: 86% !important;
+    }
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .services {
+        padding: 80px 0 80px;
+    }
+    .services-carousol {
+        margin-left: 40px;
+    }
+    .services .common-title-container .common-title {
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+    .services-navigation .swiper-button-prev {
+        left: 5% !important;
+    }
+    .swiper-button-next {
+        right: 83% !important;
+    }
+    .services-navigation .swiper-button-next, .services-navigation .swiper-button-prev {
+        top: 93% !important;
+    }
+
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px){
+    .services {
+        padding: 80px 0 80px;
+    }
+    .services-carousol {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .services .common-title-container .common-title {
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+    .services-navigation .swiper-button-prev {
+        left: 5% !important;
+    }
+    .swiper-button-next {
+        right: 68% !important;
+    }
+    .services-navigation .swiper-button-next, .services-navigation .swiper-button-prev {
+        top: 93% !important;
+    }
+}
+/* ---------------------------------------------------------------
+Responsive
+----------------------------------------------------------------- */

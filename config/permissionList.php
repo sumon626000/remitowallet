@@ -1,0 +1,28 @@
+<?php
+
+return [
+	'fund' => 1,
+	'transfer' => 2,
+	'exchange' => 3,
+	'redeem' => 4,
+	'escrow' => 5,
+	'voucher' => 6,
+	'store' => 7,
+	'payout' => 8,
+	'invoice' => 9,
+	'virtual_card' => 10,
+	'bill_payment' => 11,
+	'roles' => 12,
+	'user_management' => 13,
+	'kyc_management' => 14,
+	'request_money' => 15,
+	'dispute' => 16,
+	'qr_payment' => 17,
+	'transaction' => 18,
+	'referral' => 19,
+	'template' => 20,
+	'basic' => 21,
+	'exchange_api' => 22,
+	'currencies' => 23,
+	'charge_and_limit' => 24,
+];

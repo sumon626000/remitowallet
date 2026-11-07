@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?82ipoc');
+  src:  url('../fonts/icomoon.eot?82ipoc#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?82ipoc') format('truetype'),
+    url('../fonts/icomoon.woff?82ipoc') format('woff'),
+    url('../fonts/icomoon.svg?82ipoc#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-car-1:before {
+  content: "\e900";
+}
+.icon-car-2:before {
+  content: "\e901";
+
+}
+.icon-car-3:before {
+  content: "\e902";
+ 
+}
+.icon-car-4:before {
+  content: "\e903";
+
+}
+.icon-car-5:before {
+  content: "\e904";
+
+}
+.icon-car-6:before {
+  content: "\e905";
+
+}
+.icon-car-7:before {
+  content: "\e906";
+
+}
+.icon-catagory:before {
+  content: "\e907";
+
+}
+.icon-check-mark:before {
+  content: "\e908";
+
+}
+.icon-clock:before {
+  content: "\e909";
+}
+.icon-play-btn:before {
+  content: "\e90a";
+}
+.icon-quote:before {
+  content: "\e90b";
+
+}
+.icon-quote-2:before {
+  content: "\e90c";
+
+}
+.icon-spring:before {
+  content: "\e90d";
+
+}
+.icon-title-border-shape:before {
+  content: "\e90e";
+}
+.icon-title-car:before {
+  content: "\e90f";
+
+}
+.icon-wheel:before {
+  content: "\e910";
+
+}
+.icon-x-twitter:before {
+  content: "\e911";
+}

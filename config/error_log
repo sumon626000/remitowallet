@@ -1,0 +1,36 @@
+[26-Apr-2026 18:06:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/remiqfyf/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/remiqfyf/public_html/config/database.php on line 18
+[10-Jun-2026 00:43:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/remiqfyf/public_html/config/app.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/remiqfyf/public_html/config/app.php on line 19
+[11-Jun-2026 01:33:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/remiqfyf/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/remiqfyf/public_html/config/database.php on line 18
+[13-Jun-2026 04:15:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/remiqfyf/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/remiqfyf/public_html/config/services.php on line 18
+[16-Jul-2026 02:43:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/remiqfyf/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/remiqfyf/public_html/config/database.php on line 18
+[16-Jul-2026 02:43:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/remiqfyf/public_html/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/remiqfyf/public_html/config/mail.php on line 16
+[16-Jul-2026 02:43:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/remiqfyf/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/remiqfyf/public_html/config/services.php on line 18
+[25-Jul-2026 01:43:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/remiqfyf/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/remiqfyf/public_html/config/database.php on line 18
+[25-Jul-2026 01:44:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/remiqfyf/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/remiqfyf/public_html/config/services.php on line 18

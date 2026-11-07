@@ -1,0 +1,24 @@
+.env
+.env.backup
+.idea
+.vscode
+.phpunit.result.cache
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/storage/logs
+/storage/debugbar
+/storage/purify
+/vendor
+*.zip
+/firebase-service.json
+/storage/main-cedar-391910-cd7c5ebfdd8b.json
+/assets/main-cedar-391910-cd7c5ebfdd8b.json
+/error_log
+/sql db/
+/assets/upload/googleTranslateCredential/
+/assets/upload/kyc/
+/assets/upload/userProfile/
+/assets/upload/profileImage/
+/assets/upload/adminProfileImage/

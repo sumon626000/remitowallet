@@ -1,0 +1,44 @@
+
+
+
+/* modul css */
+@import url('module-css/01-header.css');
+@import url('module-css/02-mobile-menu.css');
+@import url('module-css/03-banner.css');
+@import url('module-css/04-footer.css');
+@import url('module-css/05-how-to.css');
+@import url('module-css/06-solution.css');
+@import url('module-css/07-services.css');
+@import url('module-css/08-brand.css');
+@import url('module-css/09-video.css');
+@import url('module-css/10-payment.css');
+@import url('module-css/11-testimonial.css');
+@import url('module-css/12-faq.css');
+@import url('module-css/13-newsletter.css');
+@import url('module-css/14-about.css');
+@import url('module-css/15-wallet.css');
+@import url('module-css/16-blog.css');
+@import url('module-css/17-contact.css');
+
+/*  */
+@import url('01-global.css');
+@import url('color.css');
+@import url('responsive.css');
+@import url('all.min.css');
+@import url('fancy-box-carusol.css');
+@import url('intlTelInput.min.css');
+@import url('flaticon.css');
+@import url('animate.css');
+@import url('icomoon.css');
+@import url('jquery.fancybox.min.css');
+@import url('swiper.min.css');
+@import url('rtl.css');
+@import url('color-switcher-design.css');
+@import url('elpath.css');
+@import url('select2.min.css');
+@import url('nice-select.css');
+@import url('flatpickr-min.css');
+@import url('odometer-theme-default.css');
+@import url('owl.css');
+@import url('magnific-popup.css');
+@import url('intlTelInput.min.css');
