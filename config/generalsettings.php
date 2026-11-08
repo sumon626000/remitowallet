@@ -39,7 +39,7 @@ return [
         'fx_trade' => [
             'route' => 'admin.fx.trade.settings',
             'icon' => 'bi bi-graph-up-arrow',
-            'short_description' => 'FX Trade settings for Trade Binary, Royal Steps, Bot Game, and All Stocks.',
+            'short_description' => 'FX Trade settings for Trade Binary, Royal Steps, Bot Game, and Forex Trade.',
         ],
         'logo' => [
             'route' => 'admin.logo.settings',

@@ -141,8 +141,8 @@
                         <div id="playGameMenu" class="nav-collapse collapse {{ menuActive(['user.play.game*'], 2) }}" data-bs-parent="#playGameMenu">
                             <a class="nav-link d-flex justify-content-between {{ menuActive(['user.play.game']) }}"
                                href="{{ route('user.play.game') }}">
-                                <span>@lang("All Games")</span>
-                                <small class="d-none">@lang("FX Trade > All Games")</small>
+                                <span>@lang("All Stocks")</span>
+                                <small class="d-none">@lang("FX Trade > All Stocks")</small>
                             </a>
                             @php $fxSet = fxTradeSettings(); @endphp
                             @if((int)$fxSet->fx_enabled === 1)
@@ -162,8 +162,8 @@
                             @if((int)($fxSet->stocks_enabled ?? 1) === 1)
                             <a class="nav-link d-flex justify-content-between {{ request()->is('user/play-game/all-stocks') ? 'active' : '' }}"
                                href="{{ route('user.play.game.show', 'all-stocks') }}">
-                                <span>@lang("All Stocks")</span>
-                                <small class="d-none">@lang("FX Trade > All Stocks")</small>
+                                <span>@lang("Forex Trade")</span>
+                                <small class="d-none">@lang("FX Trade > Forex Trade")</small>
                             </a>
                             @endif
                             @if((int)$fxSet->bot_enabled === 1)

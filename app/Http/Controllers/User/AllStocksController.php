@@ -19,7 +19,7 @@ class AllStocksController extends Controller
     public function state(Request $request): JsonResponse
     {
         if ((int) fxTradeSettings()->stocks_enabled !== 1) {
-            return $this->fail('All Stocks is currently off', 403);
+            return $this->fail('Forex Trade is currently off', 403);
         }
 
         $userId = (int) Auth::id();
@@ -43,7 +43,7 @@ class AllStocksController extends Controller
     public function open(Request $request): JsonResponse
     {
         if ((int) fxTradeSettings()->stocks_enabled !== 1) {
-            return $this->fail('All Stocks is currently off', 403);
+            return $this->fail('Forex Trade is currently off', 403);
         }
 
         $userId = (int) Auth::id();

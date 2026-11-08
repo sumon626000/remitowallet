@@ -1,20 +1,20 @@
 @extends(userLayout())
-@section('title', trans('All Stocks'))
+@section('title', trans('Forex Trade'))
 @section('content')
     <div class="content {{ containerClass() }}">
-        <x-page-header menu="FX Trade" submenu="All Stocks"/>
+        <x-page-header menu="FX Trade" submenu="Forex Trade"/>
 
         <div class="as-wrap">
             <div class="as-head">
                 <a class="as-back" href="{{ route('user.play.game') }}"><i class="bi-chevron-left"></i></a>
                 <div>
-                    <h1>@lang('All Stocks')</h1>
+                    <h1>@lang('Forex Trade')</h1>
                     <p>@lang('Predict whether the price finishes higher or lower.')</p>
                 </div>
             </div>
 
             @if($stockAssets->isEmpty() || empty($stockDurations))
-                <div class="as-empty">@lang('All Stocks markets are not available right now.')</div>
+                <div class="as-empty">@lang('Forex Trade markets are not available right now.')</div>
             @else
                 <div class="as-grid">
                     <label class="as-field">
@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="as-chart-card">
-                    <canvas id="asChart" height="180"></canvas>
+                    <canvas id="asChart" height="230"></canvas>
                 </div>
 
                 <div class="as-price-wrap">
@@ -106,6 +106,7 @@
             let duration = config.durations[0];
             let price = null;
             let series = [];
+            let candles = [];
             let busy = false;
             let serverOffset = 0;
             let trades = [];
@@ -194,35 +195,70 @@
             function drawChart() {
                 const ctx = canvas.getContext('2d');
                 const width = canvas.clientWidth || 320;
-                const height = 180;
+                const height = 230;
                 const ratio = window.devicePixelRatio || 1;
                 canvas.width = Math.floor(width * ratio);
                 canvas.height = Math.floor(height * ratio);
                 ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-                ctx.clearRect(0, 0, width, height);
-                const points = series.filter(function (n) { return Number.isFinite(n); });
-                if (points.length < 2) return;
-                const min = Math.min.apply(null, points);
-                const max = Math.max.apply(null, points);
-                const span = (max - min) || (min * 0.002) || 1;
-                const pad = 12;
-                ctx.beginPath();
-                points.forEach(function (point, i) {
-                    const x = pad + (i / (points.length - 1)) * (width - pad * 2);
-                    const y = height - pad - ((point - min) / span) * (height - pad * 2);
-                    if (i === 0) ctx.moveTo(x, y);
-                    else ctx.lineTo(x, y);
+                const dark = document.documentElement.getAttribute('data-hs-theme-appearance') === 'dark';
+                ctx.fillStyle = dark ? '#25282b' : '#ffffff';
+                ctx.fillRect(0, 0, width, height);
+
+                let bars = candles.filter(function (bar) {
+                    return bar && Number.isFinite(Number(bar.o)) && Number.isFinite(Number(bar.h)) && Number.isFinite(Number(bar.l)) && Number.isFinite(Number(bar.c));
                 });
-                ctx.strokeStyle = '#377dff';
-                ctx.lineWidth = 2;
-                ctx.stroke();
-                const last = points[points.length - 1];
-                const x = width - pad;
-                const y = height - pad - ((last - min) / span) * (height - pad * 2);
-                ctx.fillStyle = '#377dff';
-                ctx.beginPath();
-                ctx.arc(x, y, 3.5, 0, Math.PI * 2);
-                ctx.fill();
+                if (bars.length < 2) {
+                    const points = series.filter(function (n) { return Number.isFinite(n); });
+                    bars = [];
+                    for (let i = 1; i < points.length; i++) {
+                        const open = points[i - 1];
+                        const close = points[i];
+                        bars.push({ o: open, h: Math.max(open, close), l: Math.min(open, close), c: close });
+                    }
+                }
+                if (bars.length < 2) return;
+
+                let min = Infinity;
+                let max = -Infinity;
+                bars.forEach(function (bar) {
+                    min = Math.min(min, Number(bar.l), Number(bar.o), Number(bar.c));
+                    max = Math.max(max, Number(bar.h), Number(bar.o), Number(bar.c));
+                });
+                const mid = (max + min) / 2 || 1;
+                let span = max - min;
+                const floor = Math.abs(mid) * 0.0012;
+                if (span < floor) {
+                    min = mid - floor / 2;
+                    max = mid + floor / 2;
+                    span = floor;
+                }
+                const padX = 10;
+                const padY = 18;
+                const plotH = height - padY * 2;
+                const slot = (width - padX * 2) / bars.length;
+                const bodyW = Math.max(4, Math.min(11, slot * 0.62));
+                function yOf(value) {
+                    return padY + (1 - ((value - min) / span)) * plotH;
+                }
+
+                bars.forEach(function (bar, i) {
+                    const open = Number(bar.o);
+                    const high = Number(bar.h);
+                    const low = Number(bar.l);
+                    const close = Number(bar.c);
+                    const color = close >= open ? '#22c55e' : '#ef4444';
+                    const x = padX + (i * slot) + (slot / 2);
+                    ctx.strokeStyle = color;
+                    ctx.fillStyle = color;
+                    ctx.lineWidth = 1.25;
+                    ctx.beginPath();
+                    ctx.moveTo(x, yOf(high));
+                    ctx.lineTo(x, yOf(low));
+                    ctx.stroke();
+                    const top = yOf(Math.max(open, close));
+                    const bodyH = Math.max(1.5, yOf(Math.min(open, close)) - top);
+                    ctx.fillRect(x - bodyW / 2, top, bodyW, bodyH);
+                });
             }
 
             function resultText(trade) {
@@ -276,6 +312,7 @@
                 document.getElementById('asLosses').textContent = String(data.losses || 0);
                 price = data.price;
                 series = Array.isArray(data.series) ? data.series.map(Number) : [];
+                candles = Array.isArray(data.candles) ? data.candles : [];
                 trades = Array.isArray(data.trades) ? data.trades : [];
                 if (price) {
                     priceEl.textContent = price;

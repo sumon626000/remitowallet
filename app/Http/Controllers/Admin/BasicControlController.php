@@ -431,7 +431,7 @@ class BasicControlController extends Controller
             ]);
         }
 
-        return back()->with('success', 'All Stocks markets updated.');
+        return back()->with('success', 'Forex Trade markets updated.');
     }
 
     private function stockDurationsFromRequest(Request $request): array|false

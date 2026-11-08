@@ -173,7 +173,7 @@
                         {{-- All Stocks --}}
                         <div class="card">
                             <div class="card-header d-flex justify-content-between align-items-center">
-                                <h2 class="card-title h4 mb-0">@lang('All Stocks')</h2>
+                                <h2 class="card-title h4 mb-0">@lang('Forex Trade')</h2>
                                 <label class="form-check form-switch mb-0" for="stocks_enabled">
                                     <input type="hidden" name="stocks_enabled" value="0">
                                     <input class="form-check-input" type="checkbox" name="stocks_enabled" id="stocks_enabled"
@@ -259,7 +259,7 @@
                 <form action="{{ route('admin.fx.trade.assets') }}" method="post" class="mt-4">
                     @csrf
                     <div class="card">
-                        <div class="card-header"><h2 class="card-title h4 mb-0">@lang('All Stocks markets')</h2></div>
+                        <div class="card-header"><h2 class="card-title h4 mb-0">@lang('Forex Trade markets')</h2></div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-sm align-middle">
@@ -296,7 +296,7 @@
 
                 <div class="card mt-4">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                        <h2 class="card-title h4 mb-0">@lang('All Stocks report')</h2>
+                        <h2 class="card-title h4 mb-0">@lang('Forex Trade report')</h2>
                         <form method="get">
                             <input class="form-control form-control-sm" name="user" value="{{ $stockQuery }}" placeholder="@lang('Username or email')">
                         </form>

@@ -84,7 +84,7 @@ class AllStocksService
     {
         $settings = fxTradeSettings();
         if ((int) $settings->stocks_enabled !== 1) {
-            throw new \RuntimeException('All Stocks is currently off');
+            throw new \RuntimeException('Forex Trade is currently off');
         }
 
         $asset = FxAsset::where('symbol', $symbol)->where('active', 1)->first();
@@ -148,7 +148,7 @@ class AllStocksService
             $trade->payout_amount = 0;
             $trade->save();
 
-            $balance = $this->move($wallet, $stake, 0, 'All Stocks stake '.$asset->symbol.' '.$direction, $trade);
+            $balance = $this->move($wallet, $stake, 0, 'Forex Trade stake '.$asset->symbol.' '.$direction, $trade);
 
             Log::info('All Stocks trade opened', [
                 'trade_id' => $trade->id,
@@ -227,7 +227,7 @@ class AllStocksService
 
             if ($playerWins) {
                 $credit = $this->winCredit((string) $trade->stake, (string) $trade->payout_pct);
-                $this->move($wallet, (float) $credit, 1, 'All Stocks win '.$trade->asset, $trade);
+                $this->move($wallet, (float) $credit, 1, 'Forex Trade win '.$trade->asset, $trade);
                 $trade->result = 'win';
                 $trade->payout_amount = $credit;
             } else {
@@ -259,7 +259,7 @@ class AllStocksService
         if ($symbol) {
             $asset = FxAsset::where('symbol', $symbol)->where('active', 1)->first();
         }
-        $quote = $asset ? $this->prices->quote($asset) : ['price' => null, 'series' => []];
+        $quote = $asset ? $this->prices->quote($asset) : ['price' => null, 'series' => [], 'candles' => []];
         $decimals = (int) ($asset->decimals ?? 5);
 
         $decimalsBySymbol = FxAsset::pluck('decimals', 'symbol');
@@ -271,6 +271,7 @@ class AllStocksService
             'balance' => round((float) $wallet->balance, 2),
             'price' => $quote['price'],
             'series' => $quote['series'],
+            'candles' => $quote['candles'] ?? [],
             'decimals' => $decimals,
             'wins' => $wins,
             'losses' => $losses,

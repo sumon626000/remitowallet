@@ -333,8 +333,8 @@
                              aria-labelledby="playGameMegaMenu" style="min-width: 14rem;">
                             @php $fxSet = fxTradeSettings(); @endphp
                             <a class="dropdown-item {{ menuActive('user.play.game') }}" href="{{ route('user.play.game') }}">
-                                <span><i class="bi-grid"></i>@lang('All Games')</span>
-                                <small class="d-none">@lang("FX Trade > All Games")</small>
+                                <span><i class="bi-grid"></i>@lang('All Stocks')</span>
+                                <small class="d-none">@lang("FX Trade > All Stocks")</small>
                             </a>
                             @if((int)$fxSet->fx_enabled === 1)
                             <a class="dropdown-item" href="{{ route('user.play.game.show', 'fx-casino') }}">
@@ -350,8 +350,8 @@
                             @endif
                             @if((int)($fxSet->stocks_enabled ?? 1) === 1)
                             <a class="dropdown-item" href="{{ route('user.play.game.show', 'all-stocks') }}">
-                                <span><i class="bi-bar-chart-line"></i>@lang('All Stocks')</span>
-                                <small class="d-none">@lang("FX Trade > All Stocks")</small>
+                                <span><i class="bi-bar-chart-line"></i>@lang('Forex Trade')</span>
+                                <small class="d-none">@lang("FX Trade > Forex Trade")</small>
                             </a>
                             @endif
                             @if((int)$fxSet->bot_enabled === 1)

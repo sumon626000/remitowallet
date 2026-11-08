@@ -180,7 +180,7 @@ class PlayGameController extends Controller
                 ],
                 [
                     'slug' => 'all-stocks',
-                    'name' => 'All Stocks',
+                    'name' => 'Forex Trade',
                     'badge' => 'NEW',
                     'icon' => 'bi-bar-chart-line',
                     'tile' => 'stocks',
@@ -221,7 +221,7 @@ class PlayGameController extends Controller
         $allGames = [
             'fx-casino' => ['slug' => 'fx-casino', 'name' => 'Trade Binary', 'tile' => 'fx'],
             'royal-step-casino' => ['slug' => 'royal-step-casino', 'name' => 'Royal Steps', 'tile' => 'royal'],
-            'all-stocks' => ['slug' => 'all-stocks', 'name' => 'All Stocks', 'tile' => 'stocks'],
+            'all-stocks' => ['slug' => 'all-stocks', 'name' => 'Forex Trade', 'tile' => 'stocks'],
             'bot-game' => ['slug' => 'bot-game', 'name' => 'Bot Game', 'tile' => 'bot'],
         ];
         $data['game'] = $allGames[$slug];

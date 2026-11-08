@@ -5,7 +5,7 @@
         <x-page-header menu="FX Trade"/>
 
         <div class="lc-arena">
-            <h1 class="lc-title">@lang('Games')</h1>
+            <h1 class="lc-title">@lang('All Stocks')</h1>
 
             <div class="lc-balance">
                 <span><i class="bi-wallet2 me-1"></i> @lang('Balance')</span>
